@@ -1,0 +1,30 @@
+type: person
+name: User
+description: >-
+  Utente che gestisce il proprio filesystem tramite l'interfaccia browser di
+  PierCommander.
+id: 454018de-30d9-62a8-74ae-cd1d704d9176
+annotations:
+  - namespace: c4modeler
+    name: position
+    value:
+      pier-commander:
+        x: 90.5
+        'y': 190.5937641835482
+      93121202-b9a1-a95b-2558-f2bf3abc8e4c:
+        x: 190.5
+        'y': 147.09372840634137
+      f6f303a3-7b2f-9935-2132-54e040412e5f:
+        x: 200
+        'y': -210.5936773423017
+interactions:
+  - targetId: 93121202-b9a1-a95b-2558-f2bf3abc8e4c
+    type: software-system
+    level: context
+    description: Naviga ed esegue comandi sul filesystem tramite browser [HTTPS]
+  - targetId: f6f303a3-7b2f-9935-2132-54e040412e5f
+    type: web-application
+    level: container
+    description: >-
+      Usa l'interfaccia a due pannelli per navigare ed eseguire comandi sul
+      filesystem [HTTPS]

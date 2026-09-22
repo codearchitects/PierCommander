@@ -1,0 +1,763 @@
+version: 1
+document:
+  sourceFeature: filesystem-operations.feature
+  updatedAt: '2026-09-22T14:29:53.452Z'
+changes:
+  - changedAt: '2026-09-22T14:11:10.120Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 1
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:13.887Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 0
+    before: null
+    after: '@c4-id:be4cea64-db47-3743-5ba1-7607b9085693'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-010) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Elenco del contenuto di una cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given una cartella del filesystem contenente file e sottocartelle'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede l''elenco del contenuto di quella cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API restituisce nome, tipo, dimensione e data di ultima modifica di ogni elemento contenuto'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-020) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Navigazione in una sottocartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given una cartella contenente una sottocartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede di entrare nella sottocartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API restituisce il contenuto della sottocartella come nuova posizione corrente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-030) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Navigazione alla cartella superiore'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given l''utente si trova in una cartella diversa dalla radice del filesystem consentito'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede di risalire alla cartella superiore'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API restituisce il contenuto della cartella superiore come nuova posizione corrente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-040) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Creazione di una nuova cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given una cartella del filesystem e un nome non ancora esistente al suo interno'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede la creazione di una nuova cartella con quel nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then la nuova cartella viene creata all''interno della cartella indicata'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And la nuova cartella compare nel successivo elenco del contenuto'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-050) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Rifiuto della creazione di una cartella con nome già esistente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given una cartella contenente già un elemento con un certo nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede la creazione di una nuova cartella con lo stesso nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API rifiuta l''operazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And il contenuto della cartella resta invariato'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-060) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Rinomina di un file o di una cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file o una cartella esistente e un nuovo nome non in conflitto'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede di rinominare l''elemento con il nuovo nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento risulta accessibile con il nuovo nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And non è più accessibile con il nome precedente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-070) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Cancellazione di un file o di una cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file o una cartella esistente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede la cancellazione dell''elemento'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento non compare più nel contenuto della cartella che lo conteneva'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-080) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Copia di un file o di una cartella in un''altra posizione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file o una cartella esistente e una cartella di destinazione diversa da quella di origine'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede la copia dell''elemento nella cartella di destinazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento compare anche nella cartella di destinazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And l''elemento originale resta invariato nella cartella di origine'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-090) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Spostamento di un file o di una cartella in un''altra posizione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file o una cartella esistente e una cartella di destinazione diversa da quella di origine'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede lo spostamento dell''elemento nella cartella di destinazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento compare nella cartella di destinazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And l''elemento non compare più nella cartella di origine'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-100) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Visualizzazione del contenuto testuale di un file'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file di testo esistente nel filesystem'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede la visualizzazione del contenuto del file'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API restituisce il contenuto testuale del file'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(FLSY-OPRT-SXK-110) @non-functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Le operazioni sul filesystem restano confinate alla radice consentita'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given una radice del filesystem configurata per l''utente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente richiede un''operazione su un percorso esterno a quella radice'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''API rifiuta l''operazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:29.011Z'
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:58.583Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 0
+    before: null
+    after: >-
+      # Essential filesystem operations exposed by the Python backend: list, navigate, create, rename, delete, copy,
+      move and view.
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:58.583Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 1
+    before: null
+    after: '# Qui ci metto le operazioni di base sul filesystem che il backend Python deve esporre.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:02.256Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 9
+    before: null
+    after: '  # Listing a folder''s contents returns name, type, size and last-modified date for each entry.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:02.256Z'
+    ref: feature:operazioni-essenziali-sul-filesystem
+    constructType: Feature
+    offset: 10
+    before: null
+    after: '  # Qui elenco cosa c''e'' dentro una cartella.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:03.336Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Entering a subfolder makes it the current position and returns its contents.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:03.336Z'
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui entro in una sottocartella.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:04.381Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Going up returns to the parent folder as the new current position.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:04.381Z'
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui risalgo alla cartella superiore.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:05.453Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Creating a folder with a free name adds it under the target folder.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:05.453Z'
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui creo una nuova cartella.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:06.728Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Creating a folder whose name already exists is rejected and nothing changes.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:06.728Z'
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui blocco la creazione se il nome esiste gia''.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:07.751Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Renaming a file or folder makes it accessible only under the new name.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:07.751Z'
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui rinomino un file o una cartella.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:08.745Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Deleting a file or folder removes it from its containing folder''s listing.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:08.745Z'
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui cancello un file o una cartella.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:09.880Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Copying a file or folder duplicates it into the destination while leaving the source unchanged.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:09.880Z'
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui copio un file o una cartella altrove.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:10.922Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Moving a file or folder relocates it to the destination and removes it from the source.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:10.922Z'
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui sposto un file o una cartella altrove.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:11.932Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Viewing a text file returns its textual content.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:11.932Z'
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui visualizzo il contenuto di un file di testo.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:12.924Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Operations outside the user''s configured filesystem root are rejected.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:12.924Z'
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui mi assicuro che non si esca dalla radice consentita.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:29:39.174Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-010
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:40.697Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-020
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:42.154Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-030
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:43.611Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-040
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:45.133Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-050
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:46.542Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-060
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:48.004Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-070
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:49.456Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-080
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:51.052Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-090
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:52.283Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-100
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1
+  - changedAt: '2026-09-22T14:29:53.452Z'
+    author: AI:anthropic/claude-sonnet-5
+    ref: FLSY-OPRT-SXK-110
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-sonnet-5 · revision 1

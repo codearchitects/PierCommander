@@ -1,0 +1,351 @@
+version: 1
+document:
+  sourceFeature: filesystem-operations.feature
+  generatedAt: '2026-09-22T15:03:15.582Z'
+  copilotSessionId: 6461cf61a509e60508fee3608eeab3f1
+  nextRequirementSeq: 120
+feature:
+  title: Operazioni essenziali sul filesystem
+  description:
+    - As a utente di PierCommander
+    - >-
+      I want poter elencare, navigare, creare, rinominare, copiare, spostare, cancellare e visualizzare file e cartelle
+      tramite API
+    - So that posso gestire il mio filesystem da browser come farei con un file manager desktop
+  comments:
+    - >-
+      Essential filesystem operations exposed by the Python backend: list, navigate, create, rename, delete, copy, move
+      and view.
+    - Qui ci metto le operazioni di base sul filesystem che il backend Python deve esporre.
+  tags:
+    - c4-id:be4cea64-db47-3743-5ba1-7607b9085693
+  scenarios:
+    - id: FLSY-OPRT-SXK-010
+      title: Elenco del contenuto di una cartella
+      comments:
+        - Listing a folder's contents returns name, type, size and last-modified date for each entry.
+        - Qui elenco cosa c'e' dentro una cartella.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:39.174Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:39.174Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: una cartella del filesystem contenente file e sottocartelle
+        - keyword: When
+          text: l'utente richiede l'elenco del contenuto di quella cartella
+        - keyword: Then
+          text: l'API restituisce nome, tipo, dimensione e data di ultima modifica di ogni elemento contenuto
+    - id: FLSY-OPRT-SXK-020
+      title: Navigazione in una sottocartella
+      comments:
+        - Entering a subfolder makes it the current position and returns its contents.
+        - Qui entro in una sottocartella.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:40.697Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:40.697Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: una cartella contenente una sottocartella
+        - keyword: When
+          text: l'utente richiede di entrare nella sottocartella
+        - keyword: Then
+          text: l'API restituisce il contenuto della sottocartella come nuova posizione corrente
+    - id: FLSY-OPRT-SXK-030
+      title: Navigazione alla cartella superiore
+      comments:
+        - Going up returns to the parent folder as the new current position.
+        - Qui risalgo alla cartella superiore.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:42.154Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:42.154Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: l'utente si trova in una cartella diversa dalla radice del filesystem consentito
+        - keyword: When
+          text: l'utente richiede di risalire alla cartella superiore
+        - keyword: Then
+          text: l'API restituisce il contenuto della cartella superiore come nuova posizione corrente
+    - id: FLSY-OPRT-SXK-040
+      title: Creazione di una nuova cartella
+      comments:
+        - Creating a folder with a free name adds it under the target folder.
+        - Qui creo una nuova cartella.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:43.611Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:43.611Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: una cartella del filesystem e un nome non ancora esistente al suo interno
+        - keyword: When
+          text: l'utente richiede la creazione di una nuova cartella con quel nome
+        - keyword: Then
+          text: la nuova cartella viene creata all'interno della cartella indicata
+        - keyword: And
+          text: la nuova cartella compare nel successivo elenco del contenuto
+    - id: FLSY-OPRT-SXK-050
+      title: Rifiuto della creazione di una cartella con nome già esistente
+      comments:
+        - Creating a folder whose name already exists is rejected and nothing changes.
+        - Qui blocco la creazione se il nome esiste gia'.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:45.133Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:45.133Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: una cartella contenente già un elemento con un certo nome
+        - keyword: When
+          text: l'utente richiede la creazione di una nuova cartella con lo stesso nome
+        - keyword: Then
+          text: l'API rifiuta l'operazione
+        - keyword: And
+          text: il contenuto della cartella resta invariato
+    - id: FLSY-OPRT-SXK-060
+      title: Rinomina di un file o di una cartella
+      comments:
+        - Renaming a file or folder makes it accessible only under the new name.
+        - Qui rinomino un file o una cartella.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:46.542Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:46.542Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: un file o una cartella esistente e un nuovo nome non in conflitto
+        - keyword: When
+          text: l'utente richiede di rinominare l'elemento con il nuovo nome
+        - keyword: Then
+          text: l'elemento risulta accessibile con il nuovo nome
+        - keyword: And
+          text: non è più accessibile con il nome precedente
+    - id: FLSY-OPRT-SXK-070
+      title: Cancellazione di un file o di una cartella
+      comments:
+        - Deleting a file or folder removes it from its containing folder's listing.
+        - Qui cancello un file o una cartella.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:48.004Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:48.004Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: un file o una cartella esistente
+        - keyword: When
+          text: l'utente richiede la cancellazione dell'elemento
+        - keyword: Then
+          text: l'elemento non compare più nel contenuto della cartella che lo conteneva
+    - id: FLSY-OPRT-SXK-080
+      title: Copia di un file o di una cartella in un'altra posizione
+      comments:
+        - Copying a file or folder duplicates it into the destination while leaving the source unchanged.
+        - Qui copio un file o una cartella altrove.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:49.456Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:49.456Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: un file o una cartella esistente e una cartella di destinazione diversa da quella di origine
+        - keyword: When
+          text: l'utente richiede la copia dell'elemento nella cartella di destinazione
+        - keyword: Then
+          text: l'elemento compare anche nella cartella di destinazione
+        - keyword: And
+          text: l'elemento originale resta invariato nella cartella di origine
+    - id: FLSY-OPRT-SXK-090
+      title: Spostamento di un file o di una cartella in un'altra posizione
+      comments:
+        - Moving a file or folder relocates it to the destination and removes it from the source.
+        - Qui sposto un file o una cartella altrove.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:51.052Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:51.052Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: un file o una cartella esistente e una cartella di destinazione diversa da quella di origine
+        - keyword: When
+          text: l'utente richiede lo spostamento dell'elemento nella cartella di destinazione
+        - keyword: Then
+          text: l'elemento compare nella cartella di destinazione
+        - keyword: And
+          text: l'elemento non compare più nella cartella di origine
+    - id: FLSY-OPRT-SXK-100
+      title: Visualizzazione del contenuto testuale di un file
+      comments:
+        - Viewing a text file returns its textual content.
+        - Qui visualizzo il contenuto di un file di testo.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:52.283Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:52.283Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: un file di testo esistente nel filesystem
+        - keyword: When
+          text: l'utente richiede la visualizzazione del contenuto del file
+        - keyword: Then
+          text: l'API restituisce il contenuto testuale del file
+    - id: FLSY-OPRT-SXK-110
+      title: Le operazioni sul filesystem restano confinate alla radice consentita
+      comments:
+        - Operations outside the user's configured filesystem root are rejected.
+        - Qui mi assicuro che non si esca dalla radice consentita.
+      type: scenario
+      tags:
+        - non-functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:28.978Z'
+        updatedAt: '2026-09-22T14:11:28.978Z'
+        aiGeneratedAt: '2026-09-22T14:29:53.452Z'
+        aiStartedAt: '2026-09-22T14:20:26.185Z'
+        aiEndedAt: '2026-09-22T14:29:53.452Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-sonnet-5
+      steps:
+        - keyword: Given
+          text: una radice del filesystem configurata per l'utente
+        - keyword: When
+          text: l'utente richiede un'operazione su un percorso esterno a quella radice
+        - keyword: Then
+          text: l'API rifiuta l'operazione

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "projectId": "pier-commander",
+  "lastUpdate": 1790090014474,
+  "workspacePath": "/Users/gdimauro69/prj/PierCommander/codegen/model",
+  "entries": {
+    "pier-commander": "index.yml",
+    "93121202-b9a1-a95b-2558-f2bf3abc8e4c": "pier-commander/pier-commander.softwaresystem.yml",
+    "be4cea64-db47-3743-5ba1-7607b9085693": "pier-commander/services/filesystem-api/filesystem-api.service.yml",
+    "f6f303a3-7b2f-9935-2132-54e040412e5f": "pier-commander/web-applications/pier-commander-web/pier-commander-web.webapplication.yml",
+    "454018de-30d9-62a8-74ae-cd1d704d9176": "user.person.yml"
+  }
+}

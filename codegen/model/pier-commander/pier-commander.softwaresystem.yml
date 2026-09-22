@@ -1,0 +1,46 @@
+type: software-system
+name: PierCommander
+description: >-
+  Norton Commander-style file manager accessibile da browser, con backend Python
+  e comandi essenziali di gestione filesystem (navigazione, copia, spostamento,
+  cancellazione, rinomina, creazione cartelle, visualizzazione file).
+isExternal: false
+id: 93121202-b9a1-a95b-2558-f2bf3abc8e4c
+annotations:
+  - namespace: c4modeler
+    name: position
+    value:
+      pier-commander:
+        x: 90.5
+        'y': 459.6875283670964
+  - namespace: c4modeler
+    name: boundary
+    value:
+      x: 190.5
+      'y': 574.6874568126827
+      width: 400
+      height: 434
+configuration:
+  ports:
+    sqlServer: 5433
+    postgres: 5432
+    oracle:
+      listener: 1521
+      emExpress: 5500
+    rabbit: 5672
+    redis: 5379
+    jaeger:
+      agentCompactUdp: 5775
+      agentConfigHttp: 5778
+      agentThriftCompactUdp: 6831
+      agentThriftBinaryUdp: 6832
+      zipkinHttp: 9411
+      collectorHttp: 14268
+      uiHttp: 16686
+  orchestrator:
+    provider: docker
+children:
+  - id: be4cea64-db47-3743-5ba1-7607b9085693
+    type: service
+  - id: f6f303a3-7b2f-9935-2132-54e040412e5f
+    type: web-application

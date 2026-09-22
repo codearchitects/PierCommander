@@ -1,0 +1,17 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
+
+# OS noise
+.DS_Store
+
+# Deployment secrets and the sandbox a local `compose up` creates.
+deploy/.env
+deploy/data/
+
+# Local verification artifacts
+pytest-report.xml
+coverage/
+
+# Python bytecode
+__pycache__/
+*.pyc

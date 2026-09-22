@@ -1,0 +1,142 @@
+name: Deploy
+
+# Ships a published release onto a host that runs Docker, over SSH.
+# Nothing here invents infrastructure: it needs four secrets and one
+# variable on the `production` environment, and says so out loud when
+# they are missing instead of failing halfway through.
+#
+#   secrets   DEPLOY_HOST, DEPLOY_USER, DEPLOY_SSH_KEY
+#             (optional) DEPLOY_PORT, GHCR_PULL_TOKEN for a private package
+#   variables DEPLOY_PATH  -- the directory on the host, e.g. /opt/piercommander
+#             FS_HOST_ROOT -- the directory PierCommander is allowed to manage
+#             WEB_PORT     -- the published port, default 8080
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Image tag to deploy (e.g. v1.0.0, edge)'
+        required: true
+        default: edge
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ vars.PUBLIC_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the deployment target is configured
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          missing=""
+          [ -n "$DEPLOY_HOST" ]    || missing="$missing DEPLOY_HOST"
+          [ -n "$DEPLOY_USER" ]    || missing="$missing DEPLOY_USER"
+          [ -n "$DEPLOY_SSH_KEY" ] || missing="$missing DEPLOY_SSH_KEY"
+          if [ -n "$missing" ]; then
+            echo "::error::No deployment target configured. Missing secrets:$missing"
+            echo "Set them on the 'production' environment, then re-run this workflow."
+            exit 1
+          fi
+
+      - name: Resolve the tag being deployed
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            echo "value=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${{ inputs.image_tag }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Load the SSH key
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -p "${DEPLOY_PORT:-22}" -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Copy the composition to the host
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+        run: |
+          set -euo pipefail
+          target="${DEPLOY_PATH:-/opt/piercommander}"
+          ssh -i ~/.ssh/id_deploy -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" \
+            "mkdir -p '$target'"
+          scp -i ~/.ssh/id_deploy -P "${DEPLOY_PORT:-22}" \
+            deploy/docker-compose.yml deploy/remote-up.sh "$DEPLOY_USER@$DEPLOY_HOST:$target/"
+
+      - name: Write the host environment file
+        env:
+          REPO: ${{ github.repository }}
+          FS_HOST_ROOT: ${{ vars.FS_HOST_ROOT }}
+          WEB_PORT: ${{ vars.WEB_PORT }}
+          IMAGE_TAG: ${{ steps.tag.outputs.value }}
+        run: |
+          set -euo pipefail
+          # GHCR image names are lowercase; the repository name need not be.
+          namespace=$(printf '%s' "$REPO" | tr '[:upper:]' '[:lower:]')
+          {
+            echo "REGISTRY=ghcr.io"
+            echo "IMAGE_NAMESPACE=$namespace"
+            echo "IMAGE_TAG=$IMAGE_TAG"
+            echo "FS_HOST_ROOT=${FS_HOST_ROOT:-/srv/piercommander/data}"
+            echo "WEB_PORT=${WEB_PORT:-8080}"
+          } > deploy.env
+          cat deploy.env
+
+      - name: Pull and restart
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+          GHCR_USER: ${{ github.actor }}
+          GHCR_TOKEN: ${{ secrets.GHCR_PULL_TOKEN }}
+        run: |
+          set -euo pipefail
+          target="${DEPLOY_PATH:-/opt/piercommander}"
+          port="${DEPLOY_PORT:-22}"
+          scp -i ~/.ssh/id_deploy -P "$port" deploy.env "$DEPLOY_USER@$DEPLOY_HOST:$target/.env"
+          ssh -i ~/.ssh/id_deploy -p "$port" "$DEPLOY_USER@$DEPLOY_HOST" \
+            "GHCR_USER='$GHCR_USER' GHCR_TOKEN='${GHCR_TOKEN:-}' bash '$target/remote-up.sh'"
+
+      - name: Verify the deployment answers
+        env:
+          PUBLIC_URL: ${{ vars.PUBLIC_URL }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          WEB_PORT: ${{ vars.WEB_PORT }}
+        run: |
+          set -euo pipefail
+          url="${PUBLIC_URL:-http://$DEPLOY_HOST:${WEB_PORT:-8080}}"
+          for i in $(seq 1 15); do
+            if curl -fsS --max-time 5 "$url" >/dev/null; then
+              echo "PierCommander is answering at $url"
+              exit 0
+            fi
+            sleep 4
+          done
+          echo "::error::$url did not answer after the deploy."
+          exit 1

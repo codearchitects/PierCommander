@@ -1,0 +1,12 @@
+id: pier-commander
+name: PierCommander
+title: PierCommander
+type: c4-project
+caepVersion: 6
+mode: universal
+description: C4 model of PierCommander
+children:
+  - id: 454018de-30d9-62a8-74ae-cd1d704d9176
+    type: person
+  - id: 93121202-b9a1-a95b-2558-f2bf3abc8e4c
+    type: software-system

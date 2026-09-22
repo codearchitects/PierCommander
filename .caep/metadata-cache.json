@@ -1,0 +1,713 @@
+{
+  "savedAt": "2026-09-22T14:06:09.940Z",
+  "types": {
+    "abstract-component": {
+      "name": "abstract-component",
+      "description": "Represents an Abstract Component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": [
+        "component",
+        "code"
+      ],
+      "childrenKey": "children",
+      "logicalPath": "{parent}/{parent-name}/misc",
+      "parentType": [
+        "service",
+        "web-application",
+        "abstract-container",
+        "abstract-component"
+      ],
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "abstract-container": {
+      "name": "abstract-container",
+      "description": "Represents an Abstract Container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "container",
+      "childrenKey": "children",
+      "logicalPath": "{parent}/{parent-name}/misc",
+      "parentType": "software-system",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "actor": {
+      "name": "actor",
+      "description": "Represents a Actor component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/actors/{name}/",
+      "parentType": "service",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "actor-method": {
+      "name": "actor-method",
+      "description": "Represents a ActorMethod component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-3.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "actor",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "actor-state-component": {
+      "name": "actor-state-component",
+      "description": "Represents a ActorStateComponent component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "actor",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "actor-state-type": {
+      "name": "actor-state-type",
+      "description": "Represents a ActorStateType component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "actor",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "application": {
+      "name": "application",
+      "description": "Represents a Application component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/applications/{name}/",
+      "sourcePath": "client/src/app/applications/{name}/{name}.index.ts",
+      "parentType": "web-application",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "domain",
+        "models",
+        "service",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "application-service": {
+      "name": "application-service",
+      "description": "Represents a Application Service component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": [
+        "component",
+        "code"
+      ],
+      "logicalPath": "{parent}/",
+      "sourcePath": "{parent}/services/{name}.service.ts",
+      "parentType": [
+        "web-application",
+        "application",
+        "domain",
+        "scenario"
+      ],
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "contracts": {
+      "name": "contracts",
+      "description": "Represents a Contracts component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "childrenKey": "children",
+      "logicalPath": "{parent}/contracts/{name}/",
+      "parentType": "service",
+      "allowedTargets": [
+        "contracts",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "controller": {
+      "name": "controller",
+      "description": "Represents a Controller component",
+      "iconUrl": "/resources/icons/artifacts/artifact-with-attachments.svg",
+      "level": "component",
+      "logicalPath": "{parent}/controllers/{name}/",
+      "sourcePath": "server/{parent-property:namespace}/src/{parent-property:namespace}/Controllers/{property-as-path:namespace}{property:name}Controller.cs",
+      "parentType": "service",
+      "childrenKey": "children",
+      "codegenSuffix": "Controller",
+      "allowedTargets": [
+        "service",
+        "contracts",
+        "dependency",
+        "mappings",
+        "web-socket-hub",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "data": {
+      "name": "data",
+      "description": "Represents a DataContainer component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "childrenKey": "children",
+      "logicalPath": "{parent}/data/{name}/",
+      "sourcePath": "server/{parent-property:namespace}/src/{parent-split-project:namespace:Infrastructure}/Data/{parent-property:name}DataContext.cs",
+      "parentType": "service",
+      "allowedTargets": [
+        "data",
+        "abstract-component",
+        "abstract-container",
+        "database"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "database": {
+      "name": "database",
+      "description": "Represents a Database container",
+      "iconUrl": "/resources/icons/artifacts/database.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/docker-compose.override.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "dependency": {
+      "name": "dependency",
+      "description": "Represents a Dependency component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/dependencies/{name}/",
+      "sourcePath": "server/{parent-property:namespace}/src/{parent-split-project:namespace:Domain}/Services/{property-as-path:namespace}{property:name}Service.cs",
+      "parentType": "service",
+      "childrenKey": "children",
+      "codegenSuffix": "Service",
+      "allowedTargets": [
+        "service",
+        "data",
+        "mappings",
+        "contracts",
+        "web-socket-hub",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "domain": {
+      "name": "domain",
+      "description": "Represents a Domain component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{interaction-from:application}/domains/{name}/",
+      "sourcePath": "{interaction-from:application}/domains/{name}/{name}.index.ts",
+      "parentType": "web-application",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "scenario",
+        "models",
+        "service",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "dto": {
+      "name": "dto",
+      "description": "Represents a DTO component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-split-project:namespace:Dto}/{parent-property-as-path:namespace}/{property-as-path:namespace}{property:name}.cs",
+      "parentType": "contracts",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "entity": {
+      "name": "entity",
+      "description": "Represents a Entity component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-2.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-split-project:namespace:Domain}/Model/{parent-property-as-path:namespace}/{property-as-path:namespace}{property:name}.cs",
+      "parentType": "data",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "gateway": {
+      "name": "gateway",
+      "description": "Represents a Gateway container",
+      "iconUrl": "/resources/icons/artifacts/artifact-vertical.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/gateways/",
+      "sourcePath": "server/Envoy/{name}-envoy.yaml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "service",
+        "nexus",
+        "abstract-component",
+        "abstract-container",
+        "controller"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "graphql": {
+      "name": "graphql",
+      "description": "Represents a GraphQL component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/graphql/{name}/",
+      "sourcePath": "server/{parent-property:namespace}/src/{parent-property:namespace}/GraphQL/Type/QueryType.cs",
+      "parentType": "service",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "dependency",
+        "mappings",
+        "contracts",
+        "web-socket-hub",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "graphql-operation": {
+      "name": "graphql-operation",
+      "description": "Represents a GraphQLOperation component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-3.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-property:namespace}/GraphQL/Type/QueryType.cs",
+      "parentType": "graphql",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "identity": {
+      "name": "identity",
+      "description": "Represents a Identity component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/components/",
+      "parentType": "service",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "mapping-profile": {
+      "name": "mapping-profile",
+      "description": "Represents a MappingProfile component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-3.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-property:namespace}/Mappings/{property:name}.cs",
+      "parentType": "mappings",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "mappings": {
+      "name": "mappings",
+      "description": "Represents a Mappings component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "childrenKey": "children",
+      "logicalPath": "{parent}/mappings/{name}/",
+      "parentType": "service",
+      "allowedTargets": [
+        "contracts",
+        "data",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "message": {
+      "name": "message",
+      "description": "Represents a Message component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "messaging",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "messagebus": {
+      "name": "messagebus",
+      "description": "Represents a Message Bus container",
+      "iconUrl": "/resources/icons/artifacts/cylinder.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/Dapr/components/{name:pascal}.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "message-handler": {
+      "name": "message-handler",
+      "description": "Represents a MessageHandler component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "messaging",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "messaging": {
+      "name": "messaging",
+      "description": "Represents a Messaging component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/messaging/{name}/",
+      "parentType": "service",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "contracts",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "method": {
+      "name": "method",
+      "description": "Represents a Method component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-3.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-split-project:namespace:Domain}/Services/{parent-property-as-path:namespace}{parent-property:name}Service.cs",
+      "parentType": "dependency",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "model": {
+      "name": "model",
+      "description": "Represents a Model component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "parentType": "models",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "models": {
+      "name": "models",
+      "description": "Represents a Models component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "childrenKey": "children",
+      "logicalPath": "{parent}/models/{name}/",
+      "parentType": "web-application",
+      "allowedTargets": [
+        "models",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "nexus": {
+      "name": "nexus",
+      "description": "Represents a Nexus container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/docker-compose.override.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "operation": {
+      "name": "operation",
+      "description": "Represents a Operation component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-3.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-property:namespace}/Controllers/{parent-property-as-path:namespace}{parent-property:name}Controller.cs",
+      "parentType": "controller",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "payload": {
+      "name": "payload",
+      "description": "Represents a Payload component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "component",
+      "logicalPath": "{parent}/payloads/",
+      "parentType": "web-application",
+      "since": "1.2.0",
+      "allowedTargets": [
+        "models",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "person": {
+      "name": "person",
+      "description": "Represents a user in the system",
+      "iconUrl": "/resources/icons/artifacts/person.svg",
+      "level": "context",
+      "logicalPath": "{root}/",
+      "allowedTargets": [
+        "software-system",
+        "web-application",
+        "shell",
+        "application",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "route-guard": {
+      "name": "route-guard",
+      "description": "Represents a Route Guard component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "code",
+      "logicalPath": "{parent}/guards/",
+      "sourcePath": "{parent}/guards/{name}.guard.ts",
+      "parentType": [
+        "application",
+        "domain",
+        "scenario"
+      ],
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "scenario": {
+      "name": "scenario",
+      "description": "Represents a Scenario container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{interaction-from:domain}/scenarios/{name}",
+      "sourcePath": "{interaction-from:domain}/scenarios/{name}/{name}.index.ts",
+      "parentType": "web-application",
+      "childrenKey": "children",
+      "allowedTargets": [
+        "service",
+        "payload",
+        "models",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "state": {
+      "name": "state",
+      "description": "Represents a ScenarioState container",
+      "iconUrl": "/resources/icons/artifacts/artifact-rounded-half.svg",
+      "level": "code",
+      "logicalPath": "{parent}/states/",
+      "sourcePath": "{parent}/states/{name}/{name:kebab}.state.ts",
+      "parentType": "scenario",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    },
+    "secret-store": {
+      "name": "secret-store",
+      "description": "Represents a SecretStore container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/Dapr/components/{name:flat}.secret.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "authentication": {
+      "name": "authentication",
+      "description": "Represents an Authentication container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "container",
+      "logicalPath": "{parent}/components/",
+      "sourcePath": "server/docker-compose.override.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "service": {
+      "name": "service",
+      "description": "Represents a Service container",
+      "iconUrl": "/resources/icons/artifacts/artifact-with-decoration.svg",
+      "level": "container",
+      "childrenKey": "children",
+      "logicalPath": "{root}/{parent-name}/services/{name}/",
+      "sourcePath": "server/{property:namespace}/src/{property:namespace}/{property:namespace}.csproj",
+      "parentType": "software-system",
+      "codegenSuffix": "Service",
+      "allowedTargets": [
+        "software-system",
+        "database",
+        "statestore",
+        "messagebus",
+        "telemetry",
+        "secret-store",
+        "service",
+        "authentication",
+        "controller",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "shell": {
+      "name": "shell",
+      "description": "Represents a Shell container",
+      "iconUrl": "/resources/icons/artifacts/client.svg",
+      "level": "container",
+      "logicalPath": "{parent}/{name}/",
+      "sourcePath": "client/src/app/app.component.ts",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "software-system",
+        "gateway",
+        "service",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "software-system": {
+      "name": "software-system",
+      "description": "Represents a Software System",
+      "iconUrl": "/resources/icons/artifacts/artifact-rounded.svg",
+      "level": "context",
+      "childrenKey": "children",
+      "logicalPath": "{root}/{name}/",
+      "allowedTargets": [
+        "software-system",
+        "person",
+        "service",
+        "web-application",
+        "shell",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "statestore": {
+      "name": "statestore",
+      "description": "Represents a State Store container",
+      "iconUrl": "/resources/icons/artifacts/bucket.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/Dapr/components/{name:pascal}.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "telemetry": {
+      "name": "telemetry",
+      "description": "Represents a Telemetry container",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "container",
+      "logicalPath": "{root}/{parent-name}/components/",
+      "sourcePath": "server/docker-compose.override.yml",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "view-transformer": {
+      "name": "view-transformer",
+      "description": "Represents a View Transformer component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": [
+        "component",
+        "code"
+      ],
+      "logicalPath": "{parent}/pipes/",
+      "sourcePath": "{parent}/pipes/{name}.pipe.ts",
+      "parentType": [
+        "web-application",
+        "application",
+        "domain",
+        "scenario"
+      ],
+      "allowedTargets": [
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "web-application": {
+      "name": "web-application",
+      "description": "Represents a Web Application container",
+      "iconUrl": "/resources/icons/artifacts/client.svg",
+      "level": "container",
+      "childrenKey": "children",
+      "logicalPath": "{root}/{parent-name}/web-applications/{name}/",
+      "sourcePath": "client/src/app/app.component.ts",
+      "parentType": "software-system",
+      "allowedTargets": [
+        "software-system",
+        "gateway",
+        "service",
+        "authentication",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "excludeExternalTypes": [
+        "gateway"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "web-socket-hub": {
+      "name": "web-socket-hub",
+      "description": "Represents a WebSocketHub component",
+      "iconUrl": "/resources/icons/artifacts/artifact.svg",
+      "level": "component",
+      "logicalPath": "{parent}/hubs/{name}/",
+      "sourcePath": "server/{parent-property:namespace}/src/{parent-property:namespace}/Hubs/{property-as-path:namespace}{property:name}Hub.cs",
+      "parentType": "service",
+      "childrenKey": "children",
+      "codegenSuffix": "Hub",
+      "allowedTargets": [
+        "service",
+        "dependency",
+        "mappings",
+        "contracts",
+        "abstract-component",
+        "abstract-container"
+      ],
+      "allowedTargetsSet": {}
+    },
+    "web-socket-operation": {
+      "name": "web-socket-operation",
+      "description": "Represents a WebSocketOperation component",
+      "iconUrl": "/resources/icons/artifacts/artifact-sections-2.variant-1.svg",
+      "level": "code",
+      "logicalPath": "{parent}/",
+      "sourcePath": "server/{grandparent-property:namespace}/src/{grandparent-property:namespace}/Hubs/{parent-property-as-path:namespace}{parent-property:name}Hub.cs",
+      "parentType": "web-socket-hub",
+      "forbiddenTargets": [],
+      "forbiddenTargetsSet": {}
+    }
+  }
+}

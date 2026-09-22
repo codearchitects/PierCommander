@@ -1,0 +1,29 @@
+{
+  "children": {
+    "93121202-b9a1-a95b-2558-f2bf3abc8e4c": [
+      "be4cea64-db47-3743-5ba1-7607b9085693",
+      "f6f303a3-7b2f-9935-2132-54e040412e5f"
+    ],
+    "pier-commander": [
+      "454018de-30d9-62a8-74ae-cd1d704d9176",
+      "93121202-b9a1-a95b-2558-f2bf3abc8e4c"
+    ]
+  },
+  "parents": {
+    "454018de-30d9-62a8-74ae-cd1d704d9176": "pier-commander",
+    "93121202-b9a1-a95b-2558-f2bf3abc8e4c": "pier-commander",
+    "be4cea64-db47-3743-5ba1-7607b9085693": "93121202-b9a1-a95b-2558-f2bf3abc8e4c",
+    "f6f303a3-7b2f-9935-2132-54e040412e5f": "93121202-b9a1-a95b-2558-f2bf3abc8e4c"
+  },
+  "interactionTargets": {
+    "93121202-b9a1-a95b-2558-f2bf3abc8e4c": [
+      "454018de-30d9-62a8-74ae-cd1d704d9176"
+    ],
+    "be4cea64-db47-3743-5ba1-7607b9085693": [
+      "f6f303a3-7b2f-9935-2132-54e040412e5f"
+    ],
+    "f6f303a3-7b2f-9935-2132-54e040412e5f": [
+      "454018de-30d9-62a8-74ae-cd1d704d9176"
+    ]
+  }
+}

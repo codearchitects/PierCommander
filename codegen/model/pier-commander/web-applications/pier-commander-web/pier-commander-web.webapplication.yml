@@ -1,0 +1,47 @@
+type: web-application
+name: PierCommanderWeb
+description: >-
+  Interfaccia utente browser-based in stile Norton Commander, a due pannelli,
+  per navigare ed eseguire i comandi essenziali sul filesystem.
+prefix: pc
+author: PierCommander
+target: react
+architecture: single-page-application
+targetProfile:
+  platform: web
+  language: typescript
+  framework: react
+  build: npm run build
+  test: npm test
+  run: npm start
+  cwd: web
+id: f6f303a3-7b2f-9935-2132-54e040412e5f
+annotations:
+  - namespace: c4modeler
+    name: position
+    value:
+      93121202-b9a1-a95b-2558-f2bf3abc8e4c:
+        x: 200
+        'y': 88.5
+      be4cea64-db47-3743-5ba1-7607b9085693:
+        x: 200
+        'y': 523.5000618077531
+  - namespace: c4modeler
+    name: boundary
+    value:
+      x: 200
+      'y': 149.99999227403086
+      width: 400
+      height: 300
+strict: false
+port: 4200
+designSystem:
+  kit: caep
+  theme:
+    - cupertino
+  icons: fontAwesomeV5Free
+interactions:
+  - targetId: be4cea64-db47-3743-5ba1-7607b9085693
+    type: service
+    level: container
+    description: Invoca le operazioni sul filesystem [HTTPS/JSON]

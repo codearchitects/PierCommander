@@ -1,0 +1,318 @@
+version: 1
+document:
+  sourceFeature: two-panel-navigation.feature
+  generatedAt: '2026-09-22T14:56:04.501Z'
+  copilotSessionId: 9b3dab7cec5b14c3cc0dfb09dd515ac2
+  nextRequirementSeq: 110
+feature:
+  title: Navigazione a due pannelli
+  description:
+    - As a utente di PierCommander
+    - >-
+      I want navigare ed eseguire i comandi essenziali sul filesystem tramite un'interfaccia a due pannelli in stile
+      Norton Commander
+    - >-
+      So that posso orientarmi rapidamente tra due posizioni del filesystem e agire su file e cartelle senza lasciare il
+      browser
+  comments:
+    - Norton-Commander-style two-panel browser UI for navigating and acting on the filesystem.
+    - Qui ci metto l'interfaccia a due pannelli in stile Norton Commander per navigare e lavorare sui file.
+  tags:
+    - c4-id:f6f303a3-7b2f-9935-2132-54e040412e5f
+  scenarios:
+    - id: TWO-PNL-NVGT-OOX-010
+      title: Visualizzazione del filesystem in due pannelli indipendenti
+      comments:
+        - Loading the page shows two independent panels, each with its own current folder.
+        - Qui mostro i due pannelli all'apertura.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:12.364Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:12.364Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: l'utente apre PierCommander nel browser
+        - keyword: When
+          text: la pagina viene caricata
+        - keyword: Then
+          text: vengono mostrati due pannelli, ciascuno con il contenuto di una propria cartella corrente
+    - id: TWO-PNL-NVGT-OOX-020
+      title: Selezione del pannello attivo
+      comments:
+        - Selecting a panel makes it the active target for subsequent commands.
+        - Qui seleziono quale pannello e' attivo.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:14.268Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:14.268Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: due pannelli visibili con contenuti diversi
+        - keyword: When
+          text: l'utente seleziona uno dei due pannelli
+        - keyword: Then
+          text: quel pannello diventa il pannello attivo su cui agiscono i comandi successivi
+    - id: TWO-PNL-NVGT-OOX-030
+      title: Apertura di una sottocartella dal pannello attivo
+      comments:
+        - Opening a subfolder in the active panel updates that panel's contents.
+        - Qui apro una sottocartella nel pannello attivo.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:16.101Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:16.101Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: il pannello attivo mostra una cartella contenente una sottocartella
+        - keyword: When
+          text: l'utente apre quella sottocartella nel pannello attivo
+        - keyword: Then
+          text: il pannello attivo mostra il contenuto della sottocartella
+    - id: TWO-PNL-NVGT-OOX-040
+      title: Copia di un elemento selezionato verso l'altro pannello
+      comments:
+        - Copying a selected item sends it to the folder shown in the other panel.
+        - Qui copio verso l'altro pannello.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:18.049Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:18.049Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un elemento selezionato nel pannello attivo e una cartella mostrata nell'altro pannello
+        - keyword: When
+          text: l'utente avvia il comando di copia
+        - keyword: Then
+          text: l'elemento viene copiato nella cartella mostrata nell'altro pannello
+        - keyword: And
+          text: il pannello di destinazione aggiorna il proprio contenuto
+    - id: TWO-PNL-NVGT-OOX-050
+      title: Spostamento di un elemento selezionato verso l'altro pannello
+      comments:
+        - Moving a selected item relocates it to the folder shown in the other panel.
+        - Qui sposto verso l'altro pannello.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:19.528Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:19.528Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un elemento selezionato nel pannello attivo e una cartella mostrata nell'altro pannello
+        - keyword: When
+          text: l'utente avvia il comando di spostamento
+        - keyword: Then
+          text: l'elemento viene spostato nella cartella mostrata nell'altro pannello
+        - keyword: And
+          text: il pannello di origine aggiorna il proprio contenuto
+    - id: TWO-PNL-NVGT-OOX-060
+      title: Cancellazione di un elemento selezionato con richiesta di conferma
+      comments:
+        - Deleting a selected item requires explicit confirmation before it is removed.
+        - Qui cancello ma solo dopo conferma.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.226Z'
+        aiGeneratedAt: '2026-09-22T15:03:22.884Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:22.884Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un elemento selezionato nel pannello attivo
+        - keyword: When
+          text: l'utente avvia il comando di cancellazione
+        - keyword: Then
+          text: viene richiesta una conferma esplicita prima di procedere
+    - id: TWO-PNL-NVGT-OOX-070
+      title: Creazione di una nuova cartella dal pannello attivo
+      comments:
+        - Creating a folder from the active panel adds it to that panel's listing.
+        - Qui creo una cartella dal pannello attivo.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:24.772Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:24.772Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: il pannello attivo mostra una cartella
+        - keyword: When
+          text: l'utente avvia il comando di creazione cartella e indica un nome
+        - keyword: Then
+          text: la nuova cartella compare nel pannello attivo
+    - id: TWO-PNL-NVGT-OOX-080
+      title: Rinomina di un elemento selezionato
+      comments:
+        - Renaming a selected item updates its name in the active panel.
+        - Qui rinomino un elemento selezionato.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:26.596Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:26.596Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un elemento selezionato nel pannello attivo
+        - keyword: When
+          text: l'utente avvia il comando di rinomina e indica un nuovo nome
+        - keyword: Then
+          text: l'elemento compare con il nuovo nome nel pannello attivo
+    - id: TWO-PNL-NVGT-OOX-090
+      title: Anteprima del contenuto di un file di testo selezionato
+      comments:
+        - Previewing a selected text file shows its textual content to the user.
+        - Qui vedo l'anteprima di un file di testo.
+      type: scenario
+      tags:
+        - functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:28.478Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:28.478Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un file di testo selezionato nel pannello attivo
+        - keyword: When
+          text: l'utente avvia il comando di visualizzazione
+        - keyword: Then
+          text: il contenuto testuale del file viene mostrato all'utente
+    - id: TWO-PNL-NVGT-OOX-100
+      title: Esecuzione dei comandi essenziali da tastiera
+      comments:
+        - Keyboard shortcuts trigger the essential commands without requiring the mouse.
+        - Qui uso le scorciatoie da tastiera per i comandi essenziali.
+      type: scenario
+      tags:
+        - non-functional
+        - c4-container
+      metadata:
+        createdAt: '2026-09-22T14:11:41.078Z'
+        updatedAt: '2026-09-22T14:11:41.078Z'
+        aiGeneratedAt: '2026-09-22T15:03:30.055Z'
+        aiStartedAt: '2026-09-22T14:32:42.347Z'
+        aiEndedAt: '2026-09-22T15:03:30.055Z'
+        aiEnabled: true
+        errorMessage: null
+        aiErrorCount: 0
+        aiErrorTotal: 0
+        aiRevisionCount: 1
+        aiProvider: anthropic
+        aiModel: claude-opus-5
+      steps:
+        - keyword: Given
+          text: un elemento selezionato in uno dei due pannelli
+        - keyword: When
+          text: >-
+            l'utente utilizza le scorciatoie da tastiera per copia, spostamento, cancellazione, rinomina o creazione
+            cartella
+        - keyword: Then
+          text: il comando corrispondente viene avviato senza richiedere l'uso del mouse

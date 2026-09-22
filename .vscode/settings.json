@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/web/node_modules": true,
+    "**/web/dist": true,
+    "**/web/coverage": true
+  },
+  "search.exclude": {
+    "**/web/node_modules": true,
+    "**/web/dist": true,
+    "**/web/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/web/node_modules": true,
+    "**/web/dist": true,
+    "**/web/coverage": true
+  }
+}

@@ -1,0 +1,42 @@
+type: service
+name: FilesystemApi
+description: >-
+  Backend Python che espone le operazioni essenziali di gestione del filesystem
+  (elenco, navigazione, copia, spostamento, cancellazione, rinomina, creazione
+  cartelle, lettura file) tramite API HTTP.
+namespace: PierCommander.Backend
+targetProfile:
+  platform: headless
+  language: python
+  framework: fastapi
+  build: python3 -m compileall -q src
+  test: python3 -m pytest
+  run: uvicorn app:api
+  cwd: backend
+id: be4cea64-db47-3743-5ba1-7607b9085693
+annotations:
+  - namespace: c4modeler
+    name: position
+    value:
+      93121202-b9a1-a95b-2558-f2bf3abc8e4c:
+        x: 200
+        'y': 345.5
+      f6f303a3-7b2f-9935-2132-54e040412e5f:
+        x: 200
+        'y': 523.4999845480618
+  - namespace: c4modeler
+    name: boundary
+    value:
+      x: 200
+      'y': 150.0000309038766
+      width: 400
+      height: 300
+target:
+  framework: net
+  version: 10
+version: 1
+generationMode: default
+data:
+  orm: EntityFrameworkCore
+sidecar: true
+mapperProvider: mapster

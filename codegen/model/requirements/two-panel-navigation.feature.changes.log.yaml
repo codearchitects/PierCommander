@@ -1,0 +1,705 @@
+version: 1
+document:
+  sourceFeature: two-panel-navigation.feature
+  updatedAt: '2026-09-22T15:03:30.055Z'
+changes:
+  - changedAt: '2026-09-22T14:11:11.443Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 1
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:14.730Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 0
+    before: null
+    after: '@c4-id:f6f303a3-7b2f-9935-2132-54e040412e5f'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-010) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Visualizzazione del filesystem in due pannelli indipendenti'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given l''utente apre PierCommander nel browser'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When la pagina viene caricata'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then vengono mostrati due pannelli, ciascuno con il contenuto di una propria cartella corrente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-020) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Selezione del pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given due pannelli visibili con contenuti diversi'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente seleziona uno dei due pannelli'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then quel pannello diventa il pannello attivo su cui agiscono i comandi successivi'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-030) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Apertura di una sottocartella dal pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given il pannello attivo mostra una cartella contenente una sottocartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente apre quella sottocartella nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then il pannello attivo mostra il contenuto della sottocartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-040) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Copia di un elemento selezionato verso l''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un elemento selezionato nel pannello attivo e una cartella mostrata nell''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di copia'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento viene copiato nella cartella mostrata nell''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And il pannello di destinazione aggiorna il proprio contenuto'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-050) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Spostamento di un elemento selezionato verso l''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un elemento selezionato nel pannello attivo e una cartella mostrata nell''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di spostamento'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento viene spostato nella cartella mostrata nell''altro pannello'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And il pannello di origine aggiorna il proprio contenuto'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-060) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Cancellazione di un elemento selezionato con richiesta di conferma'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un elemento selezionato nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di cancellazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then viene richiesta una conferma esplicita prima di procedere'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And, confermando, l''elemento non compare più nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-070) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Creazione di una nuova cartella dal pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given il pannello attivo mostra una cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di creazione cartella e indica un nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then la nuova cartella compare nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-080) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Rinomina di un elemento selezionato'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un elemento selezionato nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di rinomina e indica un nuovo nome'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then l''elemento compare con il nuovo nome nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-090) @functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Anteprima del contenuto di un file di testo selezionato'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un file di testo selezionato nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente avvia il comando di visualizzazione'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then il contenuto testuale del file viene mostrato all''utente'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: '  @id(TWO-PNL-NVGT-OOX-100) @non-functional @c4-container'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 1
+    before: null
+    after: '  Scenario: Esecuzione dei comandi essenziali da tastiera'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 2
+    before: null
+    after: '    Given un elemento selezionato in uno dei due pannelli'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 3
+    before: null
+    after: '    When l''utente utilizza le scorciatoie da tastiera per copia, spostamento, cancellazione, rinomina o creazione cartella'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 4
+    before: null
+    after: '    Then il comando corrispondente viene avviato senza richiedere l''uso del mouse'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.223Z'
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: ''
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:41.384Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 5
+    before: '    And, confermando, l''elemento non compare più nel pannello attivo'
+    after: null
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:55.007Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 5
+    before: null
+    after: '    And, confermata la cancellazione, l''elemento non compare piu'' nel pannello attivo'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:55.029Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 5
+    before: '    And, confermata la cancellazione, l''elemento non compare piu'' nel pannello attivo'
+    after: null
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:59.584Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 0
+    before: null
+    after: '# Norton-Commander-style two-panel browser UI for navigating and acting on the filesystem.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:11:59.584Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 1
+    before: null
+    after: '# Qui ci metto l''interfaccia a due pannelli in stile Norton Commander per navigare e lavorare sui file.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:15.310Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 9
+    before: null
+    after: '  # Loading the page shows two independent panels, each with its own current folder.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:15.310Z'
+    ref: feature:navigazione-a-due-pannelli
+    constructType: Feature
+    offset: 10
+    before: null
+    after: '  # Qui mostro i due pannelli all''apertura.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:16.444Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Selecting a panel makes it the active target for subsequent commands.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:16.444Z'
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui seleziono quale pannello e'' attivo.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:17.556Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Opening a subfolder in the active panel updates that panel''s contents.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:17.556Z'
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui apro una sottocartella nel pannello attivo.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:18.644Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Copying a selected item sends it to the folder shown in the other panel.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:18.644Z'
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui copio verso l''altro pannello.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:19.748Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Moving a selected item relocates it to the folder shown in the other panel.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:19.748Z'
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui sposto verso l''altro pannello.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:20.970Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Deleting a selected item requires explicit confirmation before it is removed.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:20.970Z'
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 8
+    before: null
+    after: '  # Qui cancello ma solo dopo conferma.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:22.101Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Creating a folder from the active panel adds it to that panel''s listing.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:22.101Z'
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui creo una cartella dal pannello attivo.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:23.196Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Renaming a selected item updates its name in the active panel.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:23.196Z'
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui rinomino un elemento selezionato.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:24.381Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Previewing a selected text file shows its textual content to the user.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:24.381Z'
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui vedo l''anteprima di un file di testo.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:25.480Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 6
+    before: null
+    after: '  # Keyboard shortcuts trigger the essential commands without requiring the mouse.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T14:12:25.480Z'
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 7
+    before: null
+    after: '  # Qui uso le scorciatoie da tastiera per i comandi essenziali.'
+    author: gdimauro <gdimauro@codearchitects.com>
+  - changedAt: '2026-09-22T15:03:12.364Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-010
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:14.268Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-020
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:16.101Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-030
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:18.049Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-040
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:19.528Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-050
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:22.884Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-060
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:24.772Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-070
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:26.596Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-080
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:28.478Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-090
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1
+  - changedAt: '2026-09-22T15:03:30.055Z'
+    author: AI:anthropic/claude-opus-5
+    ref: TWO-PNL-NVGT-OOX-100
+    constructType: Scenario
+    offset: 0
+    before: null
+    after: AI elaboration green · provider anthropic · model claude-opus-5 · revision 1

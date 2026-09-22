@@ -1,0 +1,200 @@
+runs:
+  - claimId: '2026-09-22T14:08:18.272Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 50349
+    esito: ok
+    documento: voglio creare un notron commander in python con user interface borwser based co…
+    conversazione: conv-mucqymk3-scze
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T14:08:18.277Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T14:08:48.209Z'
+        esito: ok
+        modello: claude-sonnet-5
+        durataSec: 30
+  - claimId: '2026-09-22T14:09:08.101Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: voglio creare un notron commander in python con user interface borwser based co…
+    conversazione: conv-mucru8dj-snx5
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T14:09:08.106Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T14:12:51.382Z'
+        esito: ok
+        modello: claude-sonnet-5
+        durataSec: 223
+  - claimId: '2026-09-22T14:47:14.544Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: prepariamo un bel readme con tutte le istruzioni e prepariamo su github codearc…
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T14:47:14.548Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T14:57:13.325Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 599
+  - claimId: '2026-09-22T14:57:13.332Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: apri safari direttamente sul github di questo progetto
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T14:57:13.335Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T14:57:47.019Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 34
+  - claimId: '2026-09-22T14:57:47.026Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: nel readme inserisci istruzioni di compilazione, esecuzione ecc
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T14:57:47.030Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:01:17.306Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 210
+  - claimId: '2026-09-22T15:01:17.313Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: licenza completamente open e free
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:01:17.316Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:04:44.688Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 207
+  - claimId: '2026-09-22T15:04:44.704Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: in una cartellla /docs inserisci documentazione dei modelli c4 e gherkin requis…
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:04:44.707Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:11:47.987Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 423
+  - claimId: '2026-09-22T15:04:45.101Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: nella documentazione AI inserisci cronologia dall'inizio alla fine e agenti / s…
+    conversazione: conv-mucru8dj-snx5
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:04:45.105Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:07:02.356Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 137
+  - claimId: '2026-09-22T15:07:02.362Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: sempre nella documentazione inserisci tempi e costi di realizzazione tramite qu…
+    conversazione: conv-mucru8dj-snx5
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:07:02.366Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:09:44.324Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 162
+  - claimId: '2026-09-22T15:13:26.397Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: lo lanciamo ?
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:13:26.401Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:17:07.863Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 221
+  - claimId: '2026-09-22T15:17:07.870Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: ok
+    documento: usa altra porta
+    conversazione: conv-mucselan-92lw
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:17:07.873Z'
+        esito: avviato
+      - passo: answer
+        at: '2026-09-22T15:17:58.330Z'
+        esito: ok
+        modello: claude-opus-5
+        durataSec: 50
+  - claimId: '2026-09-22T15:17:49.561Z'
+    origine: AI Assistant
+    host: Mac-2.lan
+    pid: 56974
+    esito: in corso
+    documento: committiamo e pushiamo
+    conversazione: conv-muctiyxw-yvur
+    traccia: ai-assistant.ai.trace.jsonl
+    passi:
+      - passo: answer
+        at: '2026-09-22T15:17:49.564Z'
+        esito: avviato

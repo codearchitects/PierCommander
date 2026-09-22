@@ -1,0 +1,149 @@
+:root {
+  --pc-bg: #0000a8;
+  --pc-fg: #d8d8d8;
+  --pc-active: #00a8a8;
+  --pc-border: #a8a8a8;
+}
+
+.pc-app {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  background: var(--pc-bg);
+  color: var(--pc-fg);
+  /* The shell owns the viewport and lays its children out in a column, so the
+     command toolbar and the function-key bar stay on screen beside the panels
+     instead of overflowing below the fold -- the key hints of
+     §REQ:TWO-PNL-NVGT-OOX-100 are only discoverable if they are visible. */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.pc-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  /* Take the space the shell has left after the toolbar and the key bar.
+     min-height:0 lets the panels' own lists scroll instead of stretching. */
+  flex: 1;
+  min-height: 0;
+}
+
+.pc-panel {
+  border: 2px solid var(--pc-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pc-panel__header {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid var(--pc-border);
+  font-weight: bold;
+}
+
+.pc-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  flex: 1;
+}
+
+.pc-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  cursor: default;
+}
+
+.pc-entry--folder .pc-entry__name {
+  font-weight: bold;
+}
+
+.pc-panel--active {
+  border-color: var(--pc-active);
+  outline: 1px solid var(--pc-active);
+}
+
+.pc-panel:focus-visible {
+  outline: 2px solid var(--pc-active);
+}
+
+.pc-status {
+  margin: 0.25rem 0 0;
+  padding: 0 0.25rem;
+  font-size: 0.85rem;
+}
+
+.pc-entry--cursor {
+  background: var(--pc-active);
+  color: #000;
+}
+
+.pc-panel--active .pc-entry--cursor {
+  background: #d8d8d8;
+}
+
+/* §REQ:TWO-PNL-NVGT-OOX-040 the command toolbar */
+.pc-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pc-error {
+  margin: 0 0.5rem;
+  color: #b00020;
+}
+
+/* §REQ:TWO-PNL-NVGT-OOX-060 the in-app confirmation */
+.pc-dialog {
+  margin: 0 0.5rem 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #888;
+  background: #fffbe6;
+}
+
+.pc-dialog__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* §REQ:TWO-PNL-NVGT-OOX-090 the text-file preview */
+.pc-preview__content {
+  margin: 0;
+  max-height: 40vh;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
+.pc-preview__name {
+  margin: 0 0 0.5rem;
+  font-weight: bold;
+}
+
+/* §REQ:TWO-PNL-NVGT-OOX-100 the Norton-Commander function-key bar */
+.pc-fnbar {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.pc-fnbar__key {
+  background: var(--pc-fg);
+  color: #000;
+  padding: 0 0.25rem;
+  font-family: inherit;
+}
+
+.pc-fnbar__label {
+  margin-left: 0.25rem;
+}

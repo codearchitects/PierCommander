@@ -1,0 +1,6 @@
+fastapi<0.116,>=0.115
+uvicorn<0.33,>=0.32
+
+[test]
+pytest<9,>=8.3
+httpx<0.28,>=0.27
