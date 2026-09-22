@@ -4,7 +4,7 @@
 # pass VITE_FS_API_URL to point the client at an API on another origin,
 # or leave it empty and let nginx proxy /fs to the api service (the
 # default in deploy/docker-compose.yml).
-FROM node:22-alpine AS builder
+FROM node:26-alpine AS builder
 
 WORKDIR /build
 ENV CI=true
