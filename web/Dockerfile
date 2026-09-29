@@ -17,7 +17,7 @@ ARG VITE_FS_API_URL=""
 ENV VITE_FS_API_URL=$VITE_FS_API_URL
 RUN npm run build
 
-FROM nginx:1.27-alpine AS runtime
+FROM nginx:1.29-alpine AS runtime
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /build/dist /usr/share/nginx/html
